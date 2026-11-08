@@ -3,7 +3,7 @@
    - 라이브러리·폰트(CDN): 캐시 우선 + 백그라운드 갱신
    - 지도 타일: 한 번 본 영역은 캐시 (최대 약 1,500장)
    - 동기화·주소 검색·날씨 API: 캐시하지 않음 */
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL = `shell-${VERSION}`;
 const CDN = 'cdn-v1';
 const TILES = 'tiles-v1';
