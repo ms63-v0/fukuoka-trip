@@ -149,6 +149,7 @@
   async function startNew() {
     if (!configured()) return;
     const code = newCode();
+    clearTimeout(pushTimer);
     setStatus('pushing');
     try {
       const res = await pushRow(code, S.snapshot(), null);
@@ -164,6 +165,7 @@
   async function connect(raw) {
     const code = normCode(raw);
     if (code.length < 20) { App.toast('동기화 코드를 다시 확인해 주세요 (25자리).'); return false; }
+    clearTimeout(pushTimer);
     setStatus('pulling');
     try {
       const row = await pullRow(code);
@@ -332,7 +334,8 @@
     });
     listeners.add(rerenderSection);
     paint();
-    if (connected()) doPull();
+    // 연결 링크(#sync=…)로 열었으면 예전 코드로 먼저 동기화하지 않고, 연결할지부터 묻는다
+    if (connected() && !pendingCode) doPull();
     setTimeout(askPending, 400);
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') doPull(); });
     window.addEventListener('online', () => { if (meta.dirty) doPush(); else doPull(); });

@@ -953,7 +953,7 @@ input:focus-visible + .buy-box { outline: 2px solid var(--accent); outline-offse
 .sync-join { display: flex; gap: 6px; width: 100%; }
 .sync-join .input { flex: 1; min-width: 0; font-size: 15px; letter-spacing: .02em; }
 .sync-code { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 12px; background: var(--accent-soft); }
-.sync-code strong { font-size: 1.05rem; color: var(--accent); word-break: break-all; letter-spacing: .03em; }
+.sync-code strong { font-size: 1.05rem; color: var(--accent); overflow-wrap: break-word; letter-spacing: .03em; }
 .sync-pill { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: var(--t-xs); font-weight: 700; color: var(--ink-2); background: var(--surface-2); padding: 4px 10px; border-radius: 99px; }
 .sync-pill i { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); }
 .sync-pill[data-sync="waiting"] i, .sync-pill[data-sync="pushing"] i, .sync-pill[data-sync="pulling"] i { background: var(--warn); }
