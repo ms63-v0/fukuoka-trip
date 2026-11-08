@@ -1,0 +1,7 @@
+.claude/
+__pycache__/
+*.json.bak
+fukuoka-trip-*.json
+.DS_Store
+Thumbs.db
+desktop.ini

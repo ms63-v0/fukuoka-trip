@@ -1,0 +1,16 @@
+{
+  "name": "후쿠오카 여행 노트",
+  "short_name": "후쿠오카",
+  "description": "후쿠오카 여행 일정, 맛집·쇼핑·방문 리스트, 동선 지도",
+  "lang": "ko",
+  "start_url": "./#home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F3F4F6",
+  "theme_color": "#23408E",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
